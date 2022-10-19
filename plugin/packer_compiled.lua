@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  neogit = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

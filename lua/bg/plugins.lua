@@ -6,6 +6,9 @@ return require('packer').startup(function()
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-telescope/telescope.nvim'
 
+    -- Git
+    use 'TimUntersberger/neogit'
+
     -- Colorschemes
     use 'sickill/vim-monokai'
 end)
