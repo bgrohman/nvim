@@ -8,5 +8,4 @@ return require('packer').startup(function()
 
     -- Colorschemes
     use 'sickill/vim-monokai'
-    use 'drewtempelmeyer/palenight.vim'
 end)
