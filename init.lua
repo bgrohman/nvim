@@ -4,7 +4,6 @@
 -- Status line
 -- Language servers
 -- Linters
--- GitHub repo
 
 vim.o.termguicolors = true
 vim.cmd.colorscheme('slate')
