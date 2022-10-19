@@ -46,3 +46,4 @@ lspconfig.sumneko_lua.setup{
 }
 
 lspconfig.bashls.setup{}
+lspconfig.pyright.setup{}
