@@ -44,3 +44,5 @@ lspconfig.sumneko_lua.setup{
         }
     }
 }
+
+lspconfig.bashls.setup{}
