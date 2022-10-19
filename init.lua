@@ -1,5 +1,4 @@
 -- TODO
--- Text completion
 -- Colorschemes
 -- Plugins
 -- Status line
@@ -17,6 +16,7 @@ vim.cmd.colorscheme('slate')
 vim.o.path = ',,**,.'
 
 -- Misc
+vim.cmd.filetype('plugin on')
 vim.o.backup = true
 vim.o.history=10000
 vim.o.wrap = false
@@ -45,7 +45,14 @@ vim.o.foldmethod = 'indent'
 vim.o.foldlevel = 999
 vim.o.foldignore = ''
 
+-- Text Completion
+vim.o.wildmode = 'longest,list,full'
+vim.o.wildmenu = true
+vim.o.wildignore = '*.o,*.class,CVS,*.pyc,.svn,.git,.gitignore,.idea,bin,target,build,node,node_modules,vendor'
+vim.o.omnifunc = 'syntaxcomplete#Complete'
+
 -- Keymaps
 vim.keymap.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>')
 vim.keymap.set('n', '<leader>cd', '<ESC>:cd %:h<CR>')
 vim.keymap.set('n', '<leader>marks', '<ESC>:marks a-zA-Z<CR>')
+vim.keymap.set('i', '<C-Space>', '<C-x><C-o>') -- Omni mode completion
