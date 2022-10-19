@@ -9,6 +9,9 @@ return require('packer').startup(function()
     -- Git
     use 'TimUntersberger/neogit'
 
+    -- LSP
+    use 'neovim/nvim-lspconfig'
+
     -- Colorschemes
     use 'sickill/vim-monokai'
 end)
