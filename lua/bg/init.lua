@@ -1,7 +1,5 @@
 -- TODO
 -- Status line
--- Language servers
--- Linters
 require('bg.basics')
 require('bg.plugins')
 require('bg.telescope')
