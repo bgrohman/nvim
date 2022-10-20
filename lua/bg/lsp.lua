@@ -63,3 +63,4 @@ lspconfig.bashls.setup{onattach = on_attach}
 lspconfig.pyright.setup{onattach = on_attach}
 lspconfig.eslint.setup{onattach = on_attach}
 lspconfig.gopls.setup{onattach = on_attach}
+lspconfig.sqlls.setup{onattach = on_attach}

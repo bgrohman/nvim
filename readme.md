@@ -16,6 +16,7 @@ npm i -g bash-language-server
 npm install -g pyright
 npm i -g vscode-langservers-extracted
 npm i -g eslint
+npm i -g sql-language-server
 
 # Golang things
 go install golang.org/x/tools/gopls@latest
