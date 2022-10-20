@@ -17,4 +17,9 @@ return packer.startup(function()
 
     -- Colorschemes
     use 'sickill/vim-monokai'
+    use 'preservim/vim-colors-pencil'
+    use 'sainnhe/everforest'
+    use 'dracula/vim'
+    use 'arcticicestudio/nord-vim'
+    use 'ayu-theme/ayu-vim'
 end)
