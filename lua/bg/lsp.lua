@@ -61,3 +61,4 @@ lspconfig.html.setup{
 
 lspconfig.bashls.setup{onattach = on_attach}
 lspconfig.pyright.setup{onattach = on_attach}
+lspconfig.eslint.setup{onattach = on_attach}

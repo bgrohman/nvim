@@ -15,4 +15,5 @@ brew install npm
 npm i -g bash-language-server
 npm install -g pyright
 npm i -g vscode-langservers-extracted
+npm i -g eslint
 ```
