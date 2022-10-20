@@ -1,7 +1,7 @@
 local lspconfig = require('lspconfig')
 
 require('lspkind').init({
-    mode = 'symbol_text'
+    mode = 'text'
 })
 
 -- Mappings.
