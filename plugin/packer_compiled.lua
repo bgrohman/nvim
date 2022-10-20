@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
   neogit = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/neogit",
