@@ -35,7 +35,7 @@ local on_attach = function(client, bufnr)
 end
 
 lspconfig.sumneko_lua.setup{
-    onattach=on_attach,
+    onattach = on_attach,
     settings = {
         Lua = {
             diagnostics = {
@@ -45,5 +45,19 @@ lspconfig.sumneko_lua.setup{
     }
 }
 
-lspconfig.bashls.setup{}
-lspconfig.pyright.setup{}
+local htmlCapabilities = vim.lsp.protocol.make_client_capabilities()
+htmlCapabilities.textDocument.completion.completionItem.snippetSupport = true
+lspconfig.html.setup{
+    capabilities = htmlCapabilities,
+    onattach = on_attach,
+    settings = {
+        css = {
+            lint = {
+                validProperties = {}
+            }
+        }
+    }
+}
+
+lspconfig.bashls.setup{onattach = on_attach}
+lspconfig.pyright.setup{onattach = on_attach}
