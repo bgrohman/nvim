@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/ayu-vim",
     url = "https://github.com/ayu-theme/ayu-vim"
   },
+  ["candle-grey"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/candle-grey",
+    url = "https://github.com/aditya-azad/candle-grey"
+  },
   everforest = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/everforest",
@@ -119,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["photon.vim"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/photon.vim",
+    url = "https://github.com/axvr/photon.vim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -143,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim-monokai",
     url = "https://github.com/sickill/vim-monokai"
+  },
+  warlock = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/warlock",
+    url = "https://github.com/hardselius/warlock"
   }
 }
 

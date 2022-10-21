@@ -26,4 +26,7 @@ return packer.startup(function()
     use 'dracula/vim'
     use 'arcticicestudio/nord-vim'
     use 'ayu-theme/ayu-vim'
+    use 'aditya-azad/candle-grey'
+    use 'axvr/photon.vim'
+    use 'hardselius/warlock'
 end)
