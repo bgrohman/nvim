@@ -36,7 +36,7 @@ vim.o.smartcase = true
 
 -- Folding
 vim.o.foldmethod = 'indent'
-vim.o.foldlevel = 0
+vim.o.foldlevel = 3
 vim.o.foldignore = ''
 
 -- Text Completion
