@@ -11,6 +11,7 @@ return packer.startup(function()
 
     -- Git
     use 'TimUntersberger/neogit'
+    use 'lewis6991/gitsigns.nvim'
 
     -- LSP
     use 'neovim/nvim-lspconfig'
@@ -30,4 +31,6 @@ return packer.startup(function()
     use 'aditya-azad/candle-grey'
     use 'axvr/photon.vim'
     use 'hardselius/warlock'
+    use 'gruvbox-community/gruvbox'
+    use({'catppuccin/nvim', as = 'catppuccin'})
 end)

@@ -3,7 +3,7 @@
 require('bg.basics')
 require('bg.plugins')
 require('bg.telescope')
-require('bg.neogit')
+require('bg.git')
 require('bg.lsp')
 require('bg.leap')
 
