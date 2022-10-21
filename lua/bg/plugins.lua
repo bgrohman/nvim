@@ -15,6 +15,7 @@ return packer.startup(function()
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind.nvim'
+    use 'simrat39/symbols-outline.nvim'
 
     -- Leap
     use 'ggandor/leap.nvim'
