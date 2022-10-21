@@ -17,7 +17,7 @@ vim.o.wrap = false
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.showcmd = true
-vim.o.scrolloff = 3
+vim.o.scrolloff = 5
 
 -- Indentation
 vim.o.autoindent = true
