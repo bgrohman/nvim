@@ -16,6 +16,9 @@ return packer.startup(function()
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind.nvim'
 
+    -- Leap
+    use 'ggandor/leap.nvim'
+
     -- Colorschemes
     use 'sickill/vim-monokai'
     use 'preservim/vim-colors-pencil'

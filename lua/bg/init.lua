@@ -5,6 +5,7 @@ require('bg.plugins')
 require('bg.telescope')
 require('bg.neogit')
 require('bg.lsp')
+require('bg.leap')
 
 vim.cmd([[
     augroup packer_user_config
