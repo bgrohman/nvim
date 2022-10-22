@@ -1,5 +1,5 @@
 vim.o.termguicolors = true
-vim.cmd.colorscheme('monokai')
+vim.cmd.colorscheme('everforest')
 
 -- Path
 -- empty = current directory
