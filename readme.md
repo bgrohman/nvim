@@ -20,4 +20,7 @@ npm i -g sql-language-server
 
 # Golang things
 go install golang.org/x/tools/gopls@latest
+
+# Patched font for terminal
+# https://www.nerdfonts.com
 ```
