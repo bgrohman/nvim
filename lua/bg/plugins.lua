@@ -21,6 +21,12 @@ return packer.startup(function()
     -- Leap
     use 'ggandor/leap.nvim'
 
+    -- Lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
     -- Colorschemes
     use 'sickill/vim-monokai'
     use 'preservim/vim-colors-pencil'
