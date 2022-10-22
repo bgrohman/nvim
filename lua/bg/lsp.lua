@@ -1,9 +1,6 @@
 local lspconfig = require('lspconfig')
 
-require('lspkind').init({
-    mode = 'text'
-})
-
+require('lspkind').init()
 require('symbols-outline').setup()
 
 -- Mappings.
