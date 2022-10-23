@@ -29,9 +29,12 @@ vim.api.nvim_create_user_command('Quickfix', builtin.quickfix, {})
 vim.api.nvim_create_user_command('HelpTags', builtin.help_tags, {})
 vim.api.nvim_create_user_command('Keymaps', builtin.keymaps, {})
 vim.api.nvim_create_user_command('Commands', builtin.commands, {})
-vim.api.nvim_create_user_command('LspReferences', builtin.lsp_references, {})
 
 local lspDefinitions = function()
     builtin.lsp_definitions({jump_type = 'never'})
 end
 vim.api.nvim_create_user_command('LspDefinitions', lspDefinitions, {})
+vim.keymap.set('n', '<leader>d', lspDefinitions, {})
+
+vim.keymap.set('n', '<leader>r', builtin.lsp_references, {})
+vim.api.nvim_create_user_command('LspReferences', builtin.lsp_references, {})
