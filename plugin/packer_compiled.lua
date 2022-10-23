@@ -175,6 +175,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
   },
+  ["vim-bg-sessions"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim-bg-sessions",
+    url = "https://github.com/bgrohman/vim-bg-sessions"
+  },
   ["vim-colors-pencil"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim-colors-pencil",

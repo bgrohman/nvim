@@ -27,6 +27,9 @@ return packer.startup(function()
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- Sessions
+    use 'bgrohman/vim-bg-sessions'
+
     -- Colorschemes
     use 'sickill/vim-monokai'
     use 'preservim/vim-colors-pencil'
