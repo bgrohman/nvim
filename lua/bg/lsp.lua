@@ -63,6 +63,7 @@ lspconfig.html.setup{
 }
 
 lspconfig.bashls.setup{on_attach = on_attach}
+lspconfig.cssls.setup{on_attach = on_attach}
 lspconfig.eslint.setup{on_attach = on_attach}
 lspconfig.gopls.setup{on_attach = on_attach}
 lspconfig.pyright.setup{on_attach = on_attach}
