@@ -29,7 +29,7 @@ return packer.startup(function()
     }
 
     -- Sessions
-    use 'bgrohman/vim-bg-sessions'
+    -- use 'bgrohman/vim-bg-sessions'
 
     -- Colorschemes
     use 'sickill/vim-monokai'
