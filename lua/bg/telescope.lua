@@ -9,9 +9,11 @@ vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
 vim.api.nvim_create_user_command('LiveGrep', builtin.live_grep, {})
 
 vim.keymap.set('n', 'gs', builtin.grep_string, {})
+vim.keymap.set('n', '<leader>g', builtin.grep_string, {})
 vim.api.nvim_create_user_command('GrepString', builtin.grep_string, {})
 
 vim.keymap.set('n', 'gc', builtin.git_bcommits, {})
+vim.keymap.set('n', '<leader>c', builtin.git_bcommits, {})
 vim.api.nvim_create_user_command('GitBufferCommits', builtin.git_bcommits, {})
 vim.api.nvim_create_user_command('GitCommits', builtin.git_commits, {})
 vim.api.nvim_create_user_command('GitStatus', builtin.git_status, {})
