@@ -31,6 +31,7 @@ vim.api.nvim_create_user_command('Locations', builtin.loclist, {})
 vim.api.nvim_create_user_command('Quickfix', builtin.quickfix, {})
 vim.api.nvim_create_user_command('Keymaps', builtin.keymaps, {})
 vim.api.nvim_create_user_command('Commands', builtin.commands, {})
+vim.api.nvim_create_user_command('CommandHistory', builtin.command_history, {})
 
 local lspDefinitions = function()
     builtin.lsp_definitions({ jump_type = 'never' })
