@@ -170,6 +170,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["typescript-language-server"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/typescript-language-server",
+    url = "https://github.com/typescript-language-server/typescript-language-server"
+  },
   vim = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim",

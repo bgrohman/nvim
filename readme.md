@@ -17,6 +17,7 @@ npm install -g pyright
 npm i -g vscode-langservers-extracted
 npm i -g eslint
 npm i -g sql-language-server
+npm i -g typescript-language-server typescript
 
 # Golang things
 go install golang.org/x/tools/gopls@latest
