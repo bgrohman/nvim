@@ -43,4 +43,5 @@ return packer.startup(function()
     use 'hardselius/warlock'
     use 'gruvbox-community/gruvbox'
     use({'catppuccin/nvim', as = 'catppuccin'})
+    use 'olimorris/onedarkpro.nvim'
 end)
