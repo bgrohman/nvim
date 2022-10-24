@@ -46,6 +46,7 @@ vim.o.wildignore = '*.o,*.class,CVS,*.pyc,.svn,.git,.gitignore,.idea,bin,target,
 vim.o.omnifunc = 'syntaxcomplete#Complete'
 
 -- Keymaps
+vim.keymap.set('n', '<leader>T', '<ESC>:vsplit | term<CR>')
 vim.keymap.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>')
 vim.keymap.set('n', '<leader>cd', '<ESC>:cd %:h<CR>')
 vim.keymap.set('n', '<leader>marks', '<ESC>:marks a-zA-Z<CR>')
