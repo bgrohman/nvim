@@ -35,6 +35,9 @@ return packer.startup(function()
     -- Sessions
     -- use 'bgrohman/vim-bg-sessions'
 
+    -- Tabs
+    use 'crispgm/nvim-tabline'
+
     -- Colorschemes
     use 'sickill/vim-monokai'
     use 'preservim/vim-colors-pencil'
