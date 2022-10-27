@@ -1,7 +1,6 @@
 -- TODO
 -- Debugging
 -- Project tree view
--- Sessions
 local packer = require('packer')
 return packer.startup(function()
     local use = packer.use
@@ -33,7 +32,7 @@ return packer.startup(function()
     }
 
     -- Sessions
-    -- use 'bgrohman/vim-bg-sessions'
+    use 'rmagatti/auto-session'
 
     -- Tabs
     use 'crispgm/nvim-tabline'

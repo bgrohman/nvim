@@ -7,6 +7,7 @@ require('bg.leap')
 require('bg.lualine')
 require('bg.markdown')
 require('bg.tabline')
+require('bg.sessions')
 
 vim.cmd([[
     augroup packer_user_config
