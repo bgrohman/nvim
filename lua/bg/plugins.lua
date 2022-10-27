@@ -1,3 +1,7 @@
+-- TODO
+-- Debugging
+-- Project tree view
+-- Sessions
 local packer = require('packer')
 return packer.startup(function()
     local use = packer.use
