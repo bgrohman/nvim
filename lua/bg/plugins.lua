@@ -50,4 +50,5 @@ return packer.startup(function()
     use 'gruvbox-community/gruvbox'
     use({'catppuccin/nvim', as = 'catppuccin'})
     use 'olimorris/onedarkpro.nvim'
+    use 'pbrisbin/vim-colors-off'
 end)

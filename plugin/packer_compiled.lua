@@ -195,6 +195,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
   },
+  ["vim-colors-off"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim-colors-off",
+    url = "https://github.com/pbrisbin/vim-colors-off"
+  },
   ["vim-colors-pencil"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/vim-colors-pencil",
