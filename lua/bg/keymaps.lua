@@ -1,5 +1,6 @@
 -- TODO: Actions
 -- TODO: Better description for function rhs entries
+-- TODO: Move into telescope extension and separate repo?
 local pickers = require('telescope.pickers')
 local entry_display = require('telescope.pickers.entry_display')
 local finders = require('telescope.finders')
@@ -9,12 +10,14 @@ local module = {}
 local mappings = {}
 
 module.set = function(mode, lhs, rhs, opts, docString)
-    table.insert(mappings, {
+    local key = mode .. ' ' .. lhs
+
+    mappings[key] = {
         mode = mode,
         lhs = lhs,
         rhs = rhs,
         docString = docString
-    })
+    }
 
     vim.keymap.set(mode, lhs, rhs, opts)
 end
@@ -37,8 +40,16 @@ local finder = function()
         })
     end
 
+    local getResultsFromMappings = function(m)
+        local results = {}
+        for _, v in pairs(m) do
+            table.insert(results, v)
+        end
+        return results
+    end
+
     return finders.new_table({
-        results = mappings,
+        results = getResultsFromMappings(mappings),
         entry_maker = function(entry)
             local rhs = entry.rhs
             if (type(rhs) == 'function') then
