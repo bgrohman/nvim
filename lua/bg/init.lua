@@ -1,3 +1,4 @@
+require('bg.keymaps')
 require('bg.basics')
 require('bg.plugins')
 require('bg.telescope')
