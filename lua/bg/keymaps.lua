@@ -79,5 +79,6 @@ local keymapsPicker = function(opts)
 end
 
 vim.api.nvim_create_user_command('Keymaps', keymapsPicker, {})
+module.set('n', '<leader>k', ':Keymaps<CR>', {}, 'Show keymappings')
 
 return module
