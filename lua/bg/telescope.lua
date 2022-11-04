@@ -38,7 +38,7 @@ local lspDefinitions = function()
     builtin.lsp_definitions({ jump_type = 'never' })
 end
 vim.api.nvim_create_user_command('LspDefinitions', lspDefinitions, {})
-keymaps.set('n', '<leader>d', lspDefinitions, {}, 'Show LSP definitions')
+keymaps.set('n', '<leader>d', lspDefinitions, {}, 'LSP: Show definitions')
 
-keymaps.set('n', '<leader>r', builtin.lsp_references, {}, 'Show LSP references')
+keymaps.set('n', '<leader>r', builtin.lsp_references, {}, 'LSP: Show references')
 vim.api.nvim_create_user_command('LspReferences', builtin.lsp_references, {})
