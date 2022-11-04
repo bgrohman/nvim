@@ -51,5 +51,4 @@ vim.o.omnifunc = 'syntaxcomplete#Complete'
 keymaps.set('n', '<leader>T', '<ESC>:vsplit | term<CR>', {}, 'Open a terminal in a veritcal split')
 keymaps.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>', {}, 'Open vimrc in current buffer')
 keymaps.set('n', '<leader>cd', '<ESC>:cd %:h<CR>', {}, 'Change current directory to current file\'s directory')
-keymaps.set('n', '<leader>marks', '<ESC>:marks a-zA-Z<CR>', {}, 'Show marks')
 keymaps.set('i', '<C-Space>', '<C-x><C-o>', {}, 'Omni mode completion') 
