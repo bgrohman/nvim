@@ -1,22 +1,23 @@
--- TODO: Actions
 -- TODO: Move into telescope extension and separate repo?
 local pickers = require('telescope.pickers')
 local entry_display = require('telescope.pickers.entry_display')
 local finders = require('telescope.finders')
 local conf = require('telescope.config').values
+local actions = require "telescope.actions"
+local action_state = require "telescope.actions.state"
 local Path = require('plenary.path')
 
 local module = {}
 local mappings = {}
 
-module.set = function(mode, lhs, rhs, opts, docString)
+module.set = function(mode, lhs, rhs, opts, doc_string)
     local key = mode .. ' ' .. lhs
 
     mappings[key] = {
         mode = mode,
         lhs = lhs,
         rhs = rhs,
-        docString = docString
+        doc_string = doc_string
     }
 
     vim.keymap.set(mode, lhs, rhs, opts)
@@ -32,15 +33,15 @@ local finder = function()
         }
     })
 
-    local makeDisplay = function(entry)
+    local make_display = function(entry)
         return displayer({
             {entry.mode .. ' ' .. entry.lhs, 'TelescopeResultsIdentifier'},
             {entry.rhs, 'TelescopeResultsComment'},
-            {entry.docString, 'TelescopeResultsFunction'}
+            {entry.doc_string, 'TelescopeResultsFunction'}
         })
     end
 
-    local getResultsFromMappings = function(m)
+    local get_results_from_mappings = function(m)
         local results = {}
         for _, v in pairs(m) do
             table.insert(results, v)
@@ -48,47 +49,58 @@ local finder = function()
         return results
     end
 
-    local getRhsLabel = function(entry)
+    local get_rhs_label = function(entry)
         local rhs = entry.rhs
 
         if (type(rhs) == 'function') then
-            local rhsInfo = debug.getinfo(rhs)
+            local rhs_info = debug.getinfo(rhs)
             -- Shorten path to 1 character per part except for the first and last 2 path parts.
-            local functionSourcePath = Path.new(rhsInfo['short_src']):shorten(1, {1, -1, -2})
-            rhs = '[Function] ' .. functionSourcePath .. ' ' .. (rhsInfo['name'] or rhsInfo['namewhat'] or '')
+            local function_source_path = Path.new(rhs_info['short_src']):shorten(1, {1, -1, -2})
+            rhs = '[Function] ' .. function_source_path .. ' ' .. (rhs_info['name'] or rhs_info['namewhat'] or '')
         end
 
         return rhs
     end
 
     return finders.new_table({
-        results = getResultsFromMappings(mappings),
+        results = get_results_from_mappings(mappings),
         entry_maker = function(entry)
-            local rhs = getRhsLabel(entry)
+            local rhs = get_rhs_label(entry)
             return {
                 value = entry.lhs,
-                ordinal = entry.mode .. ' ' .. entry.lhs .. ' ' .. rhs .. ' ' .. entry.docString,
+                ordinal = entry.mode .. ' ' .. entry.lhs .. ' ' .. rhs .. ' ' .. entry.doc_string,
                 mode = entry.mode,
                 lhs = entry.lhs,
                 rhs = rhs,
-                docString = entry.docString,
-                display = makeDisplay
+                doc_string = entry.doc_string,
+                display = make_display
             }
         end
     })
 end
 
-local keymapsPicker = function(opts)
+module.keymaps_picker = function(opts)
     opts = opts or {}
 
     pickers.new(opts, {
         prompt_title = 'Keymaps',
         finder = finder(),
-        sorter = conf.generic_sorter(opts)
+        sorter = conf.generic_sorter(opts),
+        attach_mappings = function(prompt_bufnr, _)
+            actions.select_default:replace(function()
+                actions.close(prompt_bufnr)
+                local selection = action_state.get_selected_entry()
+                local leader = vim.g.mapleader or '\\\\'
+                local keys = string.gsub(selection['lhs'], '<leader>', leader)
+                keys = vim.api.nvim_replace_termcodes(keys, true, false, true)
+                vim.api.nvim_input(keys)
+            end)
+            return true
+        end,
     }):find()
 end
 
-vim.api.nvim_create_user_command('Keymaps', keymapsPicker, {})
+vim.api.nvim_create_user_command('Keymaps', module.keymaps_picker, {})
 module.set('n', '<leader>k', ':Keymaps<CR>', {}, 'Show keymappings')
 
 return module
