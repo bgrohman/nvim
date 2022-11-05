@@ -1,10 +1,10 @@
 -- TODO: Actions
--- TODO: Better description for function rhs entries
 -- TODO: Move into telescope extension and separate repo?
 local pickers = require('telescope.pickers')
 local entry_display = require('telescope.pickers.entry_display')
 local finders = require('telescope.finders')
 local conf = require('telescope.config').values
+local Path = require('plenary.path')
 
 local module = {}
 local mappings = {}
@@ -26,9 +26,9 @@ local finder = function()
     local displayer = entry_display.create({
         separator = ' ',
         items = {
-            { width = 0.2 },
-            { width = 0.2 },
-            { width = 0.6 }
+            { width = 0.15 },
+            { width = 0.35 },
+            { width = 0.50 }
         }
     })
 
@@ -48,13 +48,23 @@ local finder = function()
         return results
     end
 
+    local getRhsLabel = function(entry)
+        local rhs = entry.rhs
+
+        if (type(rhs) == 'function') then
+            local rhsInfo = debug.getinfo(rhs)
+            -- Shorten path to 1 character per part except for the first and last 2 path parts.
+            local functionSourcePath = Path.new(rhsInfo['short_src']):shorten(1, {1, -1, -2})
+            rhs = '[Function] ' .. functionSourcePath .. ' ' .. (rhsInfo['name'] or rhsInfo['namewhat'] or '')
+        end
+
+        return rhs
+    end
+
     return finders.new_table({
         results = getResultsFromMappings(mappings),
         entry_maker = function(entry)
-            local rhs = entry.rhs
-            if (type(rhs) == 'function') then
-                rhs = 'Function'
-            end
+            local rhs = getRhsLabel(entry)
             return {
                 value = entry.lhs,
                 ordinal = entry.mode .. ' ' .. entry.lhs .. ' ' .. rhs .. ' ' .. entry.docString,
