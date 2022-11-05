@@ -24,7 +24,7 @@ end
 
 local finder = function()
     local displayer = entry_display.create({
-        separator = ' ',
+        separator = '│ ',
         items = {
             { width = 0.15 },
             { width = 0.35 },
@@ -34,9 +34,9 @@ local finder = function()
 
     local makeDisplay = function(entry)
         return displayer({
-            entry.mode .. ' ' .. entry.lhs,
-            entry.rhs,
-            entry.docString
+            {entry.mode .. ' ' .. entry.lhs, 'TelescopeResultsIdentifier'},
+            {entry.rhs, 'TelescopeResultsComment'},
+            {entry.docString, 'TelescopeResultsFunction'}
         })
     end
 
