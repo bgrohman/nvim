@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
   },
+  ["nvim-keymapper"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-keymapper",
+    url = "https://github.com/bgrohman/nvim-keymapper"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",

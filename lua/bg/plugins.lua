@@ -11,6 +11,7 @@ return packer.startup(function()
     use 'nvim-lua/plenary.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-telescope/telescope.nvim'
+    use 'bgrohman/nvim-keymapper'
 
     -- Git
     use 'TimUntersberger/neogit'

@@ -1,4 +1,4 @@
-local keymaps = require('bg.keymaps')
+local keymapper = require('nvim-keymapper')
 
 vim.o.termguicolors = true
 vim.cmd.colorscheme('everforest')
@@ -47,8 +47,8 @@ vim.o.wildmenu = true
 vim.o.wildignore = '*.o,*.class,CVS,*.pyc,.svn,.git,.gitignore,.idea,bin,target,build,node,node_modules,vendor'
 vim.o.omnifunc = 'syntaxcomplete#Complete'
 
--- Keymaps
-keymaps.set('n', '<leader>T', '<ESC>:vsplit | term<CR>', {}, 'Open a terminal in a veritcal split')
-keymaps.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>', {}, 'Open vimrc in current buffer')
-keymaps.set('n', '<leader>cd', '<ESC>:cd %:h<CR>', {}, 'Change current directory to current file\'s directory')
-keymaps.set('i', '<C-Space>', '<C-x><C-o>', {}, 'Omni mode completion') 
+-- Keymappings
+keymapper.set('n', '<leader>T', '<ESC>:vsplit | term<CR>', {}, 'Open a terminal in a veritcal split')
+keymapper.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>', {}, 'Open vimrc in current buffer')
+keymapper.set('n', '<leader>cd', '<ESC>:cd %:h<CR>', {}, 'Change current directory to current file\'s directory')
+keymapper.set('i', '<C-Space>', '<C-x><C-o>', {}, 'Omni mode completion')
