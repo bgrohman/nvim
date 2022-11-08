@@ -14,6 +14,10 @@ module.setLocalPlainText = function()
     vim.opt_local.comments = ''
     vim.opt_local.commentstring = '> %s'
 
+    -- Make j and k move between visible (wrapped) lines
+    vim.api.nvim_buf_set_keymap(0, 'n', 'j', 'gj', {})
+    vim.api.nvim_buf_set_keymap(0, 'n', 'k', 'gk', {})
+
     vim.opt_local.foldmethod = 'expr'
     vim.api.nvim_exec([[
         function! MarkdownFoldLevel() 
