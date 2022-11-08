@@ -48,7 +48,7 @@ vim.o.wildignore = '*.o,*.class,CVS,*.pyc,.svn,.git,.gitignore,.idea,bin,target,
 vim.o.omnifunc = 'syntaxcomplete#Complete'
 
 -- Keymappings
-keymapper.set('n', '<leader>T', '<ESC>:vsplit | term<CR>', {}, 'Open a terminal in a veritcal split')
+keymapper.set('n', '<leader>T', '<ESC>:vsplit | term<CR>', {}, 'Open a terminal in a vertical split')
 keymapper.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>', {}, 'Open vimrc in current buffer')
 keymapper.set('n', '<leader>cd', '<ESC>:cd %:h<CR>', {}, 'Change current directory to current file\'s directory')
 keymapper.set('i', '<C-Space>', '<C-x><C-o>', {}, 'Omni mode completion')
