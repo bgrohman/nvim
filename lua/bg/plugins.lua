@@ -22,6 +22,7 @@ return packer.startup(function()
     use 'onsails/lspkind.nvim'
     use 'simrat39/symbols-outline.nvim'
     use 'typescript-language-server/typescript-language-server'
+    use 'mfussenegger/nvim-lint'
 
     -- Leap
     use 'ggandor/leap.nvim'

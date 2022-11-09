@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-keymapper",
     url = "https://github.com/bgrohman/nvim-keymapper"
   },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",

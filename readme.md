@@ -9,15 +9,16 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 brew install ripgrep
 brew install fd
 brew install shellcheck
+brew install vale
 
 # NPM things
 brew install npm
-npm i -g bash-language-server
+npm install -g bash-language-server
 npm install -g pyright
-npm i -g vscode-langservers-extracted
-npm i -g eslint
-npm i -g sql-language-server
-npm i -g typescript-language-server typescript
+npm install -g vscode-langservers-extracted
+npm install -g eslint
+npm install -g sql-language-server
+npm install -g typescript-language-server typescript
 
 # Golang things
 go install golang.org/x/tools/gopls@latest

@@ -1,8 +1,29 @@
 local lspconfig = require('lspconfig')
+local lspkind = require('lspkind')
+local symbols_outline = require('symbols-outline')
 local keymapper = require('nvim-keymapper')
+local lint = require('lint')
+local vale = require('lint.linters.vale')
 
-require('lspkind').init()
-require('symbols-outline').setup()
+lspkind.init()
+symbols_outline.setup()
+
+lint.linters_by_ft = {
+    markdown = {'vale'},
+    text = {'vale'}
+}
+table.insert(vale.args, '--config')
+table.insert(vale.args, '/Users/bryan/.config/vale/vale.ini')
+
+vim.api.nvim_create_augroup('Vale', {clear = true})
+vim.api.nvim_create_autocmd({'BufRead', 'BufWritePost'}, {
+    group = 'Vale',
+    pattern = {'*.txt', '*.md'},
+    callback = function()
+        lint.try_lint('vale')
+    end
+})
+
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
