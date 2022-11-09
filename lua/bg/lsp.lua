@@ -16,9 +16,9 @@ lint.linters_by_ft = {
 table.insert(vale.args, '--config')
 table.insert(vale.args, '/Users/bryan/.config/vale/vale.ini')
 vim.api.nvim_create_augroup('Vale', {clear = true})
-vim.api.nvim_create_autocmd({'BufRead', 'BufWritePost'}, {
+vim.api.nvim_create_autocmd({'BufRead', 'BufWritePost', 'InsertLeave', 'TextChanged'}, {
     group = 'Vale',
-    pattern = {'*.txt', '*.md'},
+    pattern = {'*.md'},
     callback = function()
         lint.try_lint('vale')
     end
