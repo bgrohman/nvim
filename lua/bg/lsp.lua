@@ -8,13 +8,13 @@ local vale = require('lint.linters.vale')
 lspkind.init()
 symbols_outline.setup()
 
+-- Lint setup
 lint.linters_by_ft = {
     markdown = {'vale'},
     text = {'vale'}
 }
 table.insert(vale.args, '--config')
 table.insert(vale.args, '/Users/bryan/.config/vale/vale.ini')
-
 vim.api.nvim_create_augroup('Vale', {clear = true})
 vim.api.nvim_create_autocmd({'BufRead', 'BufWritePost'}, {
     group = 'Vale',
@@ -23,7 +23,6 @@ vim.api.nvim_create_autocmd({'BufRead', 'BufWritePost'}, {
         lint.try_lint('vale')
     end
 })
-
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
