@@ -1,7 +1,7 @@
 local module = {}
 
 module.setLocalPlainText = function()
-    vim.opt_local.spell = false -- Handled with vale
+    vim.opt_local.spell = true
     vim.opt_local.wrap = true
     vim.opt_local.linebreak = true
     vim.opt_local.list = false
@@ -32,7 +32,7 @@ module.setLocalPlainText = function()
     ]], false)
 end
 
-vim.api.nvim_create_user_command('PlainText', module.setLocalPlainText, {})
+vim.api.nvim_create_user_command('PlainText', module.setLocalPlainText, {desc = 'Set plaintext settings locally'})
 
 vim.api.nvim_create_augroup('PlainText', {clear = true})
 -- TODO: foldexpr stuff not working after auto command runs

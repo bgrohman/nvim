@@ -16,14 +16,12 @@ lint.linters_by_ft = {
 }
 table.insert(vale.args, '--config')
 table.insert(vale.args, '/Users/bryan/.config/vale/vale.ini')
-vim.api.nvim_create_augroup('Vale', {clear = true})
-vim.api.nvim_create_autocmd({'BufRead', 'BufWritePost', 'InsertLeave', 'TextChanged'}, {
-    group = 'Vale',
-    pattern = {'*.md'},
-    callback = function()
-        lint.try_lint('vale')
-    end
-})
+vim.api.nvim_create_user_command('Lint', function()
+    lint.try_lint()
+end, {desc = "Run linters"})
+vim.api.nvim_create_user_command('Vale', function()
+    lint.try_lint('vale')
+end, {desc = "Run Vale linter"})
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
