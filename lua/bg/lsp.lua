@@ -9,6 +9,7 @@ lspkind.init()
 symbols_outline.setup()
 
 -- Lint setup
+-- TODO: Better spelling dictionary management.
 lint.linters_by_ft = {
     markdown = {'vale'},
     text = {'vale'}
