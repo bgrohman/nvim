@@ -39,6 +39,12 @@ return packer.startup(function()
     -- Tabs
     use 'crispgm/nvim-tabline'
 
+    -- Tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+
     -- Colorschemes
     use 'sickill/vim-monokai'
     use 'preservim/vim-colors-pencil'

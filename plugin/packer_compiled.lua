@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-tabline",
     url = "https://github.com/crispgm/nvim-tabline"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/bryan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
