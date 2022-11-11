@@ -1,3 +1,5 @@
+local keymapper = require('nvim-keymapper')
+
 require('neogit').setup()
 require('gitsigns').setup()
 
@@ -8,3 +10,4 @@ local gitAutoCommit = function()
 end
 
 vim.api.nvim_create_user_command('GitAutoCommit', gitAutoCommit, {desc = 'Automatically commit all modified files'})
+keymapper.set('n', '<leader>ac', gitAutoCommit, {}, 'Automatically commit all modified files')
