@@ -17,6 +17,7 @@ vim.o.undofile = true
 vim.o.history = 10000
 vim.o.wrap = false
 vim.o.number = true
+vim.o.relativenumber = true
 vim.o.showcmd = true
 vim.o.scrolloff = 5
 
