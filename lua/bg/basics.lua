@@ -53,3 +53,8 @@ keymapper.set('t', '<ESC>', '<C-\\><C-n>', {}, 'Switch to normal mode when in te
 keymapper.set('n', '<leader>rc', '<ESC>:e $MYVIMRC<CR>', {}, 'Open vimrc in current buffer')
 keymapper.set('n', '<leader>cd', '<ESC>:cd %:h<CR>', {}, 'Change current directory to current file\'s directory')
 keymapper.set('i', '<C-Space>', '<C-x><C-o>', {}, 'Omni mode completion')
+keymapper.set('n', '<C-d>', '<C-d>zz', {}, 'Center cursor when scrolling down')
+keymapper.set('n', '<C-u>', '<C-u>zz', {}, 'Center cursor when scrolling up')
+keymapper.set('n', '*', '*zz', {}, 'Center cursor when searching')
+keymapper.set('n', 'n', 'nzz', {}, 'Center cursor when moving to next search match')
+keymapper.set('n', 'N', 'Nzz', {}, 'Center cursor when moving to previous search match')
