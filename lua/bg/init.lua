@@ -1,5 +1,5 @@
-require('bg.basics')
 require('bg.plugins')
+require('bg.basics')
 require('bg.telescope')
 require('bg.git')
 require('bg.lsp')
